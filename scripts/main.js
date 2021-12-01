@@ -1,7 +1,7 @@
 // Takes in name of csv and populates necessary data in table
 function readFromCSV(path) {
   var rawFile = new XMLHttpRequest();
-  rawFile.open("GET", path, false);
+  rawFile.open("GET", path, true);
   rawFile.onreadystatechange = function() {
     if (rawFile.readyState === 4) {
       if (rawFile.status === 200 || rawFile.status == 0) {
@@ -75,11 +75,12 @@ function convertCSVArrayToTraineeData(csvArrays) {
     trainee = {};
     trainee.name_romanized = traineeArray[0];
     trainee.name_hangul = traineeArray[1];
-    trainee.grade = traineeArray[3];
-    trainee.birthyear = traineeArray[4];
-    trainee.eliminated = traineeArray[5] === 'e'; // sets trainee to be eliminated if 'e' appears in 6th col
-    trainee.top7 = traineeArray[5] === 't'; // sets trainee to top 7 if 't' appears in 6th column
-    trainee.id = parseInt(traineeArray[6]) - 1; // trainee id is the original ordering of the trainees in the first csv
+    trainee.company = '&#8203;';
+    trainee.grade = traineeArray[2];
+    trainee.birthyear = traineeArray[3];
+    trainee.eliminated = traineeArray[4] === 'e'; // sets trainee to be eliminated if 'e' appears in 6th col
+    trainee.top7 = traineeArray[4] === 't'; // sets trainee to top 7 if 't' appears in 6th column
+    trainee.id = parseInt(traineeArray[5]) - 1; // trainee id is the original ordering of the trainees in the first csv
     trainee.image =
       trainee.name_romanized.replace(" ", "").replace("-", "") + ".jpg";
     return trainee;
@@ -102,7 +103,7 @@ function newTrainee() {
 // Constructor for a blank ranking list
 function newRanking() {
   // holds the ordered list of rankings that the user selects
-  let ranking = new Array(12);
+  let ranking = new Array(7);
   for (let i = 0; i < ranking.length; i++) {
     ranking[i] = newTrainee();
   }
@@ -173,7 +174,7 @@ function populateTableEntry(trainee) {
   <div class="table__entry ${eliminated}">
     <div class="table__entry-icon">
       <img class="table__entry-img" src="assets/trainees/${trainee.image}" />
-      <div class="table__entry-icon-border ${trainee.grade.toLowerCase()}-rank-border"></div>
+      <div class="table__entry-icon-border grade-${trainee.grade}-border"></div>
       ${
         top7 ? '<div class="table__entry-icon-crown"></div>' : ''
       }
