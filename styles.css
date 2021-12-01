@@ -1,7 +1,7 @@
 /* define constants up here */
 :root {
-  --banner-bg-start: #fd5e6d;
-  --banner-bg-end: #ef5079;
+  --banner-bg-start: #fc87df;
+  --banner-bg-end: #fc87df;
   --produce-gray: #e4e4e4;
   --search-text-gray: #949494;
   --search-gray: #f2f2f2;
@@ -14,11 +14,10 @@
   --checked-blue: #052ae2CC;
 
   /* ranking border colors */
-  --a-rank: #fb4a8c;
-  --b-rank: #fc840c;
-  --c-rank: #ffc407;
-  --d-rank: #19b468;
-  --f-rank: #a6a6a4;
+  --grade-1: #00b3ff;
+  --grade-2: #ffa72f;
+  --grade-3: #ff2842;
+  --grade-4: #ab81f5;
   --no-rank: #707070;
 }
 
@@ -225,20 +224,17 @@ body {
   background-origin: content-box;
 }
 /* Different entry borders */
-.a-rank-border {
-  border: 5px solid var(--a-rank);
+.grade-1-border {
+  border: 5px solid var(--grade-1);
 }
-.b-rank-border {
-  border: 5px solid var(--b-rank);
+.grade-2-border {
+  border: 5px solid var(--grade-2);
 }
-.c-rank-border {
-  border: 5px solid var(--c-rank);
+.grade-3-border {
+  border: 5px solid var(--grade-3);
 }
-.d-rank-border {
-  border: 5px solid var(--d-rank);
-}
-.f-rank-border {
-  border: 5px solid var(--f-rank);
+.grade-4-border {
+  border: 5px solid var(--grade-4);
 }
 .no-rank-border {
   border: none;
@@ -347,20 +343,17 @@ body {
 .bg-no {
   background-color: var(--no-rank);
 }
-.bg-a {
-  background-color: var(--a-rank);
+.bg-1 {
+  background-color: var(--grade-1);
 }
-.bg-b {
-  background-color: var(--b-rank);
+.bg-2 {
+  background-color: var(--grade-2);
 }
-.bg-c {
-  background-color: var(--c-rank);
+.bg-3 {
+  background-color: var(--grade-3);
 }
-.bg-d {
-  background-color: var(--d-rank);
-}
-.bg-f {
-  background-color: var(--f-rank);
+.bg-4 {
+  background-color: var(--grade-4);
 }
 .eliminated .ranking__entry-icon-badge {
   background-color: var(--no-rank);
