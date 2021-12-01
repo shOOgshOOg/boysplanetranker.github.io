@@ -1,7 +1,7 @@
 // Takes in name of csv and populates necessary data in table
 function readFromCSV(path) {
   var rawFile = new XMLHttpRequest();
-  rawFile.open("GET", path, true);
+  rawFile.open("GET", path, false);
   rawFile.onreadystatechange = function() {
     if (rawFile.readyState === 4) {
       if (rawFile.status === 200 || rawFile.status == 0) {
