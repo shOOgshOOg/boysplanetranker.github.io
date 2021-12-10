@@ -336,7 +336,8 @@ const alternateRomanizations = {
   'lee yumin': ['lee yoomin'],
   'choe sumin': ['choi sumin', 'choe soomin', 'choi soomin'],
   'ju hyorin': ['joo hyorin'],
-  'ko eunchae': ['go eunchae']
+  'ko eunchae': ['go eunchae'],
+  'ryou jayhyun': ['yoo jayhyun', 'ryou jaehyun', 'yoo jaehyun']
 };
 
 // uses the current filter text to create a subset of trainees with matching info
