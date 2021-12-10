@@ -1,7 +1,7 @@
 /* define constants up here */
 :root {
-  --banner-bg-start: #fc87df;
-  --banner-bg-end: #fc87df;
+  --banner-bg-start: #f992ff;
+  --banner-bg-end: #ff7ab7;
   --produce-gray: #e4e4e4;
   --search-text-gray: #949494;
   --search-gray: #f2f2f2;
@@ -37,7 +37,7 @@ body {
 
 /* Styles for banner */
 #top-banner {
-  background: radial-gradient(circle, var(--banner-bg-start), var(--banner-bg-end) 60%);
+  background: linear-gradient(90deg, var(--banner-bg-start), var(--banner-bg-end) 60%);
   /* background-color: var(--banner-bg-color); */
   padding: 25px;
 
@@ -46,8 +46,8 @@ body {
   text-align: center;
 }
 #banner-image {
-  width: 125px;
-  margin-bottom: 15px;
+  width: 175px;
+  margin-bottom: 0px;
 }
 #banner-title {
   font-family: 'Roboto Condensed', sans-serif;
