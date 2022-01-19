@@ -173,7 +173,7 @@ function populateTableEntry(trainee) {
   const tableEntry = `
   <div class="table__entry ${eliminated}">
     <div class="table__entry-icon">
-      <img class="table__entry-img" src="assets/trainees/${trainee.image}" />
+      <img class="table__entry-img" src="assets/trainees2/${trainee.image}" />
       <div class="table__entry-icon-border grade-${trainee.grade}-border"></div>
       ${
         top8 ? '<div class="table__entry-icon-crown"></div>' : ''
@@ -248,7 +248,7 @@ function populateRankingEntry(trainee, currRank) {
   <div class="ranking__entry ${eliminated}">
     <div class="ranking__entry-view">
       <div class="ranking__entry-icon">
-        <img class="ranking__entry-img" src="assets/trainees/${trainee.image}" />
+        <img class="ranking__entry-img" src="assets/trainees2/${trainee.image}" />
         <div class="ranking__entry-icon-border grade-${trainee.grade}-border" data-rankid="${currRank-1}"></div>
       </div>
       <div class="ranking__entry-icon-badge bg-${trainee.grade}">${currRank}</div>
