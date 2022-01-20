@@ -118,7 +118,7 @@ body {
   font-size: 14px;
   font-weight: 700;
   color: white;
-  background-color: #fc87df;
+  background-color: #87181c;
 }
 #getlink-button:active { /* these styles are active while get link is being pressed */
   background-color: #c60964;
