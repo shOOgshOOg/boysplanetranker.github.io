@@ -103,7 +103,7 @@ function newTrainee() {
 // Constructor for a blank ranking list
 function newRanking() {
   // holds the ordered list of rankings that the user selects
-  let ranking = new Array(8);
+  let ranking = new Array(9);
   for (let i = 0; i < ranking.length; i++) {
     ranking[i] = newTrainee();
   }
